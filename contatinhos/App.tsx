@@ -24,7 +24,8 @@ import { Loading } from '@/app/components/loading';
     return(
       <>
         <StatusBar barStyle={'light-content'}
-        backgroundColor={'transparent'}/>
+        backgroundColor={'transparent'}
+        translucent/>
         <Home />
       </>
     )
