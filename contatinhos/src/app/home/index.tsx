@@ -23,6 +23,10 @@ export function Home(){
                     onPress={() => setName("")}></Feather>
                 </Input>
             </View>
+            <Contact contact={{
+                name: "Pedroso",
+                image: require("@/assets/avatar.jpeg")
+            }}/>
         </View>
     )
 }
