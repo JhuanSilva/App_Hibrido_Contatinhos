@@ -1,13 +1,32 @@
-import { View } from 'react-native'
+import { Alert, View } from 'react-native'
 import { Feather } from "@expo/vector-icons"
 import { theme } from '@/theme'
 import { styles } from './styles'
 import { Input } from '@/app/components/input'
-import { useState } from 'react'
-import { Contact } from '../components/contact'
+import { useState, useEffect } from 'react'
+import * as Contacts  from 'expo-contacts'
+import { Contact } from '@/app/components/contact'
 
 export function Home(){
     const [name, setName] = useState("")
+
+    async function fetchContacts(){
+        try{
+            const { status } = await Contacts.requestPermissionsAsync()
+            if (status === Contacts.PermissionStatus.GRANTED){
+                const { data } = await Contacts.getContactsAsync()
+                console.log(data)
+            }
+
+        } catch(error){
+            console.log(error)
+            Alert.alert("Contatinhos", "Não foi possível carregar os contatos...")
+        }
+    }
+
+    useEffect(() => {
+        fetchContacts()
+    }, [])
 
     return (
         <View style={styles.container}>

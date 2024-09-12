@@ -15,6 +15,6 @@ export const styles = StyleSheet.create ({
         paddingHorizontal: 24,
     },
     input: {
-        marginBottom: 27,
+        marginBottom: -27,
     },
 })

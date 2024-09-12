@@ -10,6 +10,6 @@ export const styles = StyleSheet.create({
         gap: 7,
     },
     name: {
-
+        
     },
 })
