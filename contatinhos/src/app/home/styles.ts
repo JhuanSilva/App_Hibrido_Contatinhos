@@ -39,4 +39,10 @@ export const styles = StyleSheet.create ({
         gap: 12,
         paddingTop: 64,
     },
+    separator: {
+        width: "100%",
+        height: 1,
+        backgroundColor: theme.colors.gray_300,
+        margin: 12,
+    }
 })
