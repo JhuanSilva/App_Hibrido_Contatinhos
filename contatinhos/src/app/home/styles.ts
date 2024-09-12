@@ -1,6 +1,12 @@
-import { StyleSheet } from "react-native"
+import { ImageProps, StyleSheet } from "react-native"
 import { theme } from "@/theme/index"
 // import { Input } from "../components/input"
+
+export type ContactProps = {
+    id: string
+    name: string
+    image?: ImageProps
+}
 
 export const styles = StyleSheet.create ({
     container: {
